@@ -1,0 +1,11 @@
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    padding : 1rem;
+    font-size: large;
+}
+
+.nav-headings, .nav-items{
+    display: flex;
+    gap: 2rem;
+}
