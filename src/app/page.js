@@ -8,13 +8,15 @@ export default function Home() {
   
   const [filmWiki, setFilmWiki] = useState("");
   const [filmName, setFilmName] = useState("");
-  const [releaseYear, setReleaseYear] = useState();
+  const [releaseYear, setReleaseYear] = useState("");
   
-  const getFilmWiki = async () => {
-    const searchURL = filmName+"_(" + releaseYear + "_film)"
+  const getFilmWiki = async (e) => {
+    e.preventDefault();
+    const searchURL = "?id=" + filmName + "&year=" + releaseYear;
     try {
+      console.log(searchURL);
       const response = await axios.get(`/api/wiki/${searchURL}`);
-      setFilmWiki(response.data);
+      setFilmWiki(JSON.stringify(response.data));
       console.log(response);
     } catch (error) {
       console.log(error);
@@ -39,6 +41,7 @@ export default function Home() {
             ></input>
         <button onSubmit={getFilmWiki}>Call Your Buddy</button>
       </form>      
+      {filmWiki}
     </div>
   )
 }
