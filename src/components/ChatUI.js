@@ -52,12 +52,13 @@ export default function ChatUI(props){
             {model == null?
                 <div className="loader">
                     <span>Loading</span>
+                    <div className="loadanimation"></div>
                 </div>
                 :
                 <div className="ui">
                     <span className="filname">{filmName}</span>
                     <input  ref={question} onKeyDown={reply} placeholder="Ask your question"></input>
-                    {answer ? answer[0]:""}
+                    {answer ? <div className="answer">{answer[0].text}</div>:"Firing up my neurons ;)"}
                 </div>
             }
         </div>
