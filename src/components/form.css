@@ -13,10 +13,14 @@
     border-radius: 10px;
 }
 
-.film-form button{
+button{
     padding: 0.5rem;
     font-size: 1rem;
     background-color: inherit;
     border: 1px solid;
     border-radius: 5px;
+}
+
+button:hover{
+    scale: 1.05;
 }

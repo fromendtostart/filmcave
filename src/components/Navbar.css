@@ -1,8 +1,9 @@
 .navbar{
     display: flex;
     justify-content: space-between;
+    background-image: linear-gradient(to right, #C5ADC5, #B2B5E0);
     padding : 1rem;
-    font-size: large;
+    font-size: 1.5rem;
 }
 
 .nav-headings, .nav-items{
