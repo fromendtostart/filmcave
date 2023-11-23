@@ -2,7 +2,7 @@
 
 import { useState, useRef, useEffect } from "react";
 
-import "@/chatUI.css";
+import "./chatUI.css";
 import * as tf from "@tensorflow/tfjs";
 import * as qna from "@tensorflow-models/qna";
 

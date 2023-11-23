@@ -1,7 +1,7 @@
 "use client"
 
 import { useState } from "react";
-import "@/page.css";
+import "./page.css";
 import Form from "@/components/Form";
 import ChatUI from "@/components/ChatUI";
 

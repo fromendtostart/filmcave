@@ -1,6 +1,6 @@
 "use client"
 
-import "@/form.css"
+import "./form.css"
 import { useState } from "react";
 import axios from "axios";
 
