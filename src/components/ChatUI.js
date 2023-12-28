@@ -40,6 +40,7 @@ export default function ChatUI(props){
 
             const answers = await model.findAnswers(userQuery, referenceText);
             setAnswer(answers);
+            console.log(answers);
         }
         else if(model===null)
         {
@@ -58,7 +59,7 @@ export default function ChatUI(props){
                 <div className="ui">
                     <span className="filname">{filmName}</span>
                     <input  ref={question} onKeyDown={reply} placeholder="Ask your question"></input>
-                    {answer ? <div className="answer">{answer[0].text}</div>:"Firing up my neurons ;)"}
+                    {answer ? <div className="answer">{answer.length>0? answer[0]?.text : "Sorry, no answer found!"}</div>:"Firing up my neurons ;)"}
                 </div>
             }
         </div>
